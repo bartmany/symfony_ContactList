@@ -54,7 +54,7 @@ class ContactController extends Controller
      */
     public function showAllAction()
     {
-        $contacts = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findAll();
+        $contacts = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findAllAndSortAZ();
 
         return ['contacts' => $contacts];
     }

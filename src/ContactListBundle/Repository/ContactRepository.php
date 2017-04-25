@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class ContactRepository extends EntityRepository
 {
+    public function findAllAndSortAZ()
+    {
+        $dql = "SELECT contact FROM ContactListBundle:Contact contact ORDER BY contact.name";
+
+        $contacts = $this->getEntityManager()->createQuery($dql)->getResult();
+
+        return $contacts;
+    }
 }
