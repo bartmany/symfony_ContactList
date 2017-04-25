@@ -26,6 +26,7 @@
 !bin/console
 !bin/symfony_requirements
 /vendor/
+.DS_Store
 
 # Assets and user uploads
 /web/bundles/
@@ -43,6 +44,7 @@
 
 # Composer PHAR
 /composer.phar
+composer.lock
 
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~

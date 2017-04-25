@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    <ol>Contacts <a href="{{ path('contactlist_contact_create') }}">create</a>
+    {% for contact in contacts %}
+        <li>Name: <a href="{{ path('contactlist_contact_showbyid', {'id': contact.id}) }}">{{ contact.name }}</a>
+            /- <a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}">edit</a>
+            /- <a href="{{ path('contactlist_contact_delete', {'id': contact.id}) }}">delete</a>
+        </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
