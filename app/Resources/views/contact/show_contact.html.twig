@@ -2,6 +2,7 @@
 {% block body %}
     Name: {{ contact.name }}
     <br>Description: {{ contact.description }}
+    <br>{{ include(':address:show_all.html.twig', {'addresses': addresses}) }}
     <br><a href="{{ path('contactlist_address_form', {'id': contact.id}) }}">add address</a>
     <br><a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}">edit</a>
     <a href="{{ path('contactlist_contact_showall') }}">list</a>

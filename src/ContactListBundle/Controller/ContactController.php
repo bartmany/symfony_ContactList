@@ -104,8 +104,10 @@ class ContactController extends Controller
     public function showByIdAction($id)
     {
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
+        $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
 
-        return ['contact' => $contact];
+        return ['contact' => $contact,
+                'addresses' => $addresses];
     }
 
     /**

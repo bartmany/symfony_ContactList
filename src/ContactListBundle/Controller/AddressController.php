@@ -57,15 +57,4 @@ class AddressController extends Controller
 
         return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
     }
-
-    /**
-     * @Route("/find")
-     * @Template(":address:show_all.html.twig")
-     */
-    public function showAllByContactId($id){
-
-        $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
-
-        return ['adresses' => $addresses];
-    }
 }
