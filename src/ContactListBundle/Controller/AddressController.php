@@ -45,16 +45,27 @@ class AddressController extends Controller
 
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
+        if (!$contact){
+            throw new $this->createNotFoundException('Contact not found');
+        }
+
         $address->setContact($contact);
 
         $form->handleRequest($request);
 
-        $em = $this->getDoctrine()->getManager();
+        if ($form->isSubmitted() && $form->isValid()){
 
-        $em->persist($address);
+            $em = $this->getDoctrine()->getManager();
 
-        $em->flush();
+            $em->persist($address);
 
-        return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
+            $em->flush();
+
+            return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
+
+        }
+
+        return ['form' => $form->createView()];
+
     }
 }

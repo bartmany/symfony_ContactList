@@ -132,7 +132,7 @@ class ContactController extends Controller
         if (!$contact){
             throw new $this->createNotFoundException('Contact not found');
         }
-        
+
         $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
 
         return ['contact' => $contact,
