@@ -25,6 +25,7 @@ class ContactController extends Controller
         $form = $this->createForm(ContactType::class, $contact);
 
         return ['form' => $form->createView()];
+
     }
 
     /**
@@ -40,12 +41,19 @@ class ContactController extends Controller
 
         $form->handleRequest($request);
 
-        $em = $this->getDoctrine()->getManager();
+        if ($form->isSubmitted() && $form->isValid()){
 
-        $em->persist($contact);
-        $em->flush();
+            $em = $this->getDoctrine()->getManager();
 
-        return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $contact->getId()]);
+            $em->persist($contact);
+
+            $em->flush();
+
+            return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $contact->getId()]);
+        }
+
+        return ['form' => $form->createView()];
+
     }
 
     /**
@@ -56,7 +64,12 @@ class ContactController extends Controller
     {
         $contacts = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findAllAndSortAZ();
 
+        if (!$contacts){
+            throw new $this->createNotFoundException('Contacts not found');
+        }
+
         return ['contacts' => $contacts];
+
     }
 
     /**
@@ -68,9 +81,14 @@ class ContactController extends Controller
     {
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
+        if (!$contact){
+            throw new $this->createNotFoundException('Contact not found');
+        }
+
         $form = $this->createForm(ContactType::class, $contact);
 
         return ['form' => $form->createView()];
+
     }
 
     /**
@@ -90,11 +108,17 @@ class ContactController extends Controller
 
         $form->handleRequest($request);
 
-        $em = $this->getDoctrine()->getManager();
+        if ($form->isSubmitted() && $form->isValid()){
 
-        $em->flush();
+            $em = $this->getDoctrine()->getManager();
 
-        return $this->redirectToRoute('contactlist_contact_showall');
+            $em->flush();
+
+            return $this->redirectToRoute('contactlist_contact_showall');
+        }
+
+        return ['form' => $form->createView()];
+
     }
 
     /**
@@ -104,6 +128,11 @@ class ContactController extends Controller
     public function showByIdAction($id)
     {
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
+
+        if (!$contact){
+            throw new $this->createNotFoundException('Contact not found');
+        }
+        
         $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
 
         return ['contact' => $contact,
