@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+{% block title %}Group List{% endblock %}
+{% block body %}
+    <ol>Groups <a href="{{ path('contactlist_groups_form') }}">create</a>
+        {% for group in groups %}
+            <li>{{ group.name }}
+            </li>
+            {% else %}
+                <p>No Groups found</p>
+        {% endfor %}
+    </ol>
+{% endblock %}

@@ -63,17 +63,13 @@ class ContactController extends Controller
     {
         $contacts = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findAllAndSortAZ();
 
-        if (!$contacts){
-            throw new $this->createNotFoundException('Contacts not found');
-        }
-
         return ['contacts' => $contacts];
 
     }
 
     /**
      * @Route("/{id}/modify")
-     * @Template(":contact:form.html.twig")
+     * @Template(":forms:form.html.twig")
      * @Method("GET")
      */
     public function showEditFormAction($id)
@@ -92,7 +88,7 @@ class ContactController extends Controller
 
     /**
      * @Route("/{id}/modify")
-     * @Template(":contact:form.html.twig")
+     * @Template(":forms:form.html.twig")
      * @Method("POST")
      */
     public function saveEditFromAction(Request $request, $id)
