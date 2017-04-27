@@ -3,14 +3,12 @@
 namespace ContactListBundle\Controller;
 
 use ContactListBundle\Entity\Address;
-use ContactListBundle\Entity\Contact;
 use ContactListBundle\Form\AddressType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class AddressController

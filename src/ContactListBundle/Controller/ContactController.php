@@ -9,7 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class ContactController extends Controller
 {
@@ -114,7 +113,7 @@ class ContactController extends Controller
 
             $em->flush();
 
-            return $this->redirectToRoute('contactlist_contact_showall');
+            return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
         }
 
         return ['form' => $form->createView()];
