@@ -1,0 +1,7 @@
+{% for email in emails %}
+    Email<a href="{{ path('contactlist_email_delete', {'emailId': email.id, 'id': contact.id}) }}">delete</a></br>
+    Email Type: {{ email.name }}</br>
+    Email: {{ email.email }}</br>
+{% else %}
+    Email: No emails found
+{% endfor %}
