@@ -1,4 +1,5 @@
 {% extends "::base.html.twig" %}
+{% block title %}Contact List{% endblock %}
 {% block body %}
     <ol>Contacts <a href="{{ path('contactlist_contact_create') }}">create</a>
     {% for contact in contacts %}
