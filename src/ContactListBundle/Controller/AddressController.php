@@ -45,7 +45,7 @@ class AddressController extends Controller
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
-            throw new $this->createNotFoundException('Contact not found');
+            throw $this->createNotFoundException('Contact not found');
         }
 
         $address->setContact($contact);
@@ -76,7 +76,7 @@ class AddressController extends Controller
         $address = $this->getDoctrine()->getRepository('ContactListBundle:Address')->find($addressId);
 
         if (!$address){
-            throw new $this->createNotFoundException('Address not found');
+            throw $this->createNotFoundException('Address not found');
         }
 
         $em = $this->getDoctrine()->getManager();

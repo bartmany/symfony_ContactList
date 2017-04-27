@@ -45,7 +45,7 @@ class PhoneNumberController extends Controller
         $contact = $this ->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
-            throw new $this->createNotFoundException('Contact not found');
+            throw $this->createNotFoundException('Contact not found');
         }
 
         $phoneNumber->setContact($contact);
@@ -75,7 +75,7 @@ class PhoneNumberController extends Controller
         $phoneNumber = $this->getDoctrine()->getRepository('ContactListBundle:PhoneNumber')->find($phoneNumberId);
 
         if (!$phoneNumber){
-            throw new $this->createNotFoundException('Number not found');
+            throw $this->createNotFoundException('Number not found');
         }
 
         $em = $this->getDoctrine()->getManager();

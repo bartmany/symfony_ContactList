@@ -45,7 +45,7 @@ class EmailController extends Controller
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
-            throw new $this->createNotFoundException('Contact not found');
+            throw $this->createNotFoundException('Contact not found');
         }
 
         $email->setContact($contact);
@@ -75,7 +75,7 @@ class EmailController extends Controller
         $email = $this->getDoctrine()->getRepository('ContactListBundle:Email')->find($emailId);
 
         if (!$email){
-            throw new $this->createNotFoundException('Email not found');
+            throw $this->createNotFoundException('Email not found');
         }
 
         $em = $this->getDoctrine()->getManager();

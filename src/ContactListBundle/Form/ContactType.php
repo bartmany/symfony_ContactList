@@ -33,6 +33,4 @@ class ContactType extends AbstractType
     {
         return 'contactlistbundle_contact';
     }
-
-
 }

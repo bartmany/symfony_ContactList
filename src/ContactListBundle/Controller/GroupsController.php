@@ -8,7 +8,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class GroupsController
@@ -60,7 +62,7 @@ class GroupsController extends Controller
     }
 
     /**
-     * @Route("/showAll")
+     * @Route("/")
      * @Template(":groups:show_all.html.twig")
      */
     public function showAllAction()
@@ -71,7 +73,7 @@ class GroupsController extends Controller
     }
 
     /**
-     * @Route("/show/{id}")
+     * @Route("/{id}")
      * @Template(":groups:show_group.html.twig")
      */
     public function showByIdAction($id)
@@ -79,7 +81,7 @@ class GroupsController extends Controller
         $group = $this->getDoctrine()->getRepository('ContactListBundle:Groups')->find($id);
 
         if(!$group){
-            throw new $this->createNotFoundException('Group not found');
+            throw $this->createNotFoundException('Group not found');
         }
 
         return ['group' => $group];
@@ -93,7 +95,7 @@ class GroupsController extends Controller
         $group = $this->getDoctrine()->getRepository('ContactListBundle:Groups')->find($id);
 
         if (!$group){
-            throw new $this->createNotFoundException('Group not found');
+            throw $this->createNotFoundException('Group not found');
         }
 
         $em = $this->getDoctrine()->getManager();
@@ -104,4 +106,17 @@ class GroupsController extends Controller
 
         return $this->redirectToRoute('contactlist_groups_showall');
     }
+//
+//    /**
+//     * @Route("/add")
+//     */
+//    public function assignUserAction()
+//    {
+//        $group = $this->getDoctrine()->getRepository('ContactListBundle:Groups')->find(2);
+//
+//
+//        return new Response($group->getName());
+//
+//    }
 }
+

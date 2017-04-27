@@ -77,7 +77,7 @@ class ContactController extends Controller
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
-            throw new $this->createNotFoundException('Contact not found');
+            throw $this->createNotFoundException('Contact not found');
         }
 
         $form = $this->createForm(ContactType::class, $contact);
@@ -125,7 +125,7 @@ class ContactController extends Controller
         $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
-            throw new $this->createNotFoundException('Contact not found');
+            throw $this->createNotFoundException('Contact not found');
         }
 
         return ['contact' => $contact];
