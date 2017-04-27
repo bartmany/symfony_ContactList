@@ -35,6 +35,11 @@ class Email
      */
     private $email;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="emails")
+     */
+    private $contact;
+
 
     /**
      * Get id
@@ -90,5 +95,28 @@ class Email
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * Set contact
+     *
+     * @param \ContactListBundle\Entity\Contact $contact
+     * @return Email
+     */
+    public function setContact(\ContactListBundle\Entity\Contact $contact = null)
+    {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Get contact
+     *
+     * @return \ContactListBundle\Entity\Contact 
+     */
+    public function getContact()
+    {
+        return $this->contact;
     }
 }
