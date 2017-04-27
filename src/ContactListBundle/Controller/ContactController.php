@@ -128,14 +128,8 @@ class ContactController extends Controller
             throw new $this->createNotFoundException('Contact not found');
         }
 
-        $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
-        $phoneNumbers = $this->getDoctrine()->getRepository('ContactListBundle:PhoneNumber')->findAllById($id);
-        $emails = $this->getDoctrine()->getRepository('ContactListBundle:Email')->findAllById($id);
+        return ['contact' => $contact];
 
-        return ['contact' => $contact,
-                'addresses' => $addresses,
-                'phoneNumbers' => $phoneNumbers,
-                'emails' => $emails];
     }
 
     /**
