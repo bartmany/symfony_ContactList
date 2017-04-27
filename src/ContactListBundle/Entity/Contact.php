@@ -51,11 +51,17 @@ class Contact
      */
     private $emails;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Groups", mappedBy="contacts")
+     */
+    private $groups;
+
     public function __construct()
     {
         $this->addresses = new ArrayCollection();
         $this->phonenumbers = new ArrayCollection();
         $this->emails = new ArrayCollection();
+        $this->groups = new ArrayCollection();
     }
 
     /**
@@ -211,5 +217,38 @@ class Contact
     public function getEmails()
     {
         return $this->emails;
+    }
+
+    /**
+     * Add groups
+     *
+     * @param \ContactListBundle\Entity\Groups $groups
+     * @return Contact
+     */
+    public function addGroup(\ContactListBundle\Entity\Groups $groups)
+    {
+        $this->groups[] = $groups;
+
+        return $this;
+    }
+
+    /**
+     * Remove groups
+     *
+     * @param \ContactListBundle\Entity\Groups $groups
+     */
+    public function removeGroup(\ContactListBundle\Entity\Groups $groups)
+    {
+        $this->groups->removeElement($groups);
+    }
+
+    /**
+     * Get groups
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGroups()
+    {
+        return $this->groups;
     }
 }
