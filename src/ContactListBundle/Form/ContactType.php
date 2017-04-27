@@ -13,7 +13,7 @@ class ContactType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('description');
+        $builder->add('name')->add('description')->add('save','submit', ['label' => 'save contact']);
     }
     
     /**

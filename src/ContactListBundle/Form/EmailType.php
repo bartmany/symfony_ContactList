@@ -13,7 +13,7 @@ class EmailType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('email');
+        $builder->add('name')->add('email')->add('save','submit', ['label' => 'save email']);
     }
     
     /**

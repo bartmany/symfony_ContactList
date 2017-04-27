@@ -19,7 +19,7 @@ class PhoneNumberController extends Controller
 {
     /**
      * @Route("/new")
-     * @Template(":phonenumber:form.html.twig")
+     * @Template(":forms:form.html.twig")
      * @Method("GET")
      */
     public function formAction()
@@ -33,7 +33,7 @@ class PhoneNumberController extends Controller
 
     /**
      * @Route("/new")
-     * @Template(":phonenumber:form.html.twig")
+     * @Template(":forms:form.html.twig")
      * @Method("POST")
      */
     public function createAction(Request $request, $id)

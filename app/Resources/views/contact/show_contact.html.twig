@@ -1,7 +1,7 @@
 {% extends "::base.html.twig" %}
 {% block body %}
     Name: {{ contact.name }}
-    <br>Description: {{ contact.description }}
+    <br>Description: {{ contact.description }}<br>
     <br>{{ include(':phonenumber:show_all.html.twig', {'phoneNumbers': phoneNumbers}) }}
     <br>{{ include(':email:show_all.html.twig', {'emails': emails}) }}
     <br>{{ include(':address:show_all.html.twig', {'addresses': addresses}) }}
