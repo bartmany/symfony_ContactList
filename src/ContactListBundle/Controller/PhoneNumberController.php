@@ -2,55 +2,53 @@
 
 namespace ContactListBundle\Controller;
 
-use ContactListBundle\Entity\Address;
-use ContactListBundle\Entity\Contact;
-use ContactListBundle\Form\AddressType;
+use ContactListBundle\Entity\PhoneNumber;
+use ContactListBundle\Form\PhoneNumberType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Class AddressController
+ * Class PhoneNumberController
  * @package ContactListBundle\Controller
- * @Route("{id}/address")
+ * @Route("{id}/phoneNumber")
  */
-class AddressController extends Controller
+class PhoneNumberController extends Controller
 {
     /**
      * @Route("/new")
-     * @Template(":address:form.html.twig")
+     * @Template(":phonenumber:form.html.twig")
      * @Method("GET")
      */
     public function formAction()
     {
-        $address = new Address();
+        $phoneNumber = new PhoneNumber();
 
-        $form = $this->createForm(AddressType::class, $address);
+        $form = $this->createForm(PhoneNumberType::class, $phoneNumber);
 
         return ['form' => $form->createView()];
     }
 
     /**
      * @Route("/new")
-     * @Template(":address:form.html.twig")
+     * @Template(":phonenumber:form.html.twig")
      * @Method("POST")
      */
     public function createAction(Request $request, $id)
     {
-        $address = new Address();
+        $phoneNumber = new PhoneNumber();
 
-        $form = $this->createForm(AddressType::class, $address);
+        $form = $this->createForm(PhoneNumberType::class, $phoneNumber);
 
-        $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
+        $contact = $this ->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
 
         if (!$contact){
             throw new $this->createNotFoundException('Contact not found');
         }
 
-        $address->setContact($contact);
+        $phoneNumber->setContact($contact);
 
         $form->handleRequest($request);
 
@@ -58,12 +56,11 @@ class AddressController extends Controller
 
             $em = $this->getDoctrine()->getManager();
 
-            $em->persist($address);
+            $em->persist($phoneNumber);
 
             $em->flush();
 
             return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
-
         }
 
         return ['form' => $form->createView()];
@@ -71,22 +68,22 @@ class AddressController extends Controller
     }
 
     /**
-     * @Route("/delete/{addressId}")
+     * @Route("/delete/{phoneNumberId}")
      */
-    public function deleteAction($addressId, $id)
+    public function deleteAction($phoneNumberId, $id)
     {
-        $address = $this->getDoctrine()->getRepository('ContactListBundle:Address')->find($addressId);
+        $phoneNumber = $this->getDoctrine()->getRepository('ContactListBundle:PhoneNumber')->find($phoneNumberId);
 
-        if (!$address){
-            throw new $this->createNotFoundException('Address not found');
+        if (!$phoneNumber){
+            throw new $this->createNotFoundException('Number not found');
         }
 
         $em = $this->getDoctrine()->getManager();
 
-        $em->remove($address);
+        $em->remove($phoneNumber);
 
         $em->flush();
 
-        return $this->redirectToRoute('contactlist_contact_showbyid',['id' => $id]);
+        return $this->redirectToRoute('contactlist_contact_showbyid', ['id' => $id]);
     }
 }

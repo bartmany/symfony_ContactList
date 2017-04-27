@@ -1,0 +1,7 @@
+{% for phoneNumber in phoneNumbers %}
+    Phone <a href="{{ path('contactlist_phonenumber_delete', {'id': contact.id, 'phoneNumberId': phoneNumber.id}) }}">delete</a><br>
+    Phone Name: {{ phoneNumber.name }}<br>
+    Phone Number: {{ phoneNumber.number }}
+{% else %}
+    Phone Number: No phone numbers found
+{% endfor %}

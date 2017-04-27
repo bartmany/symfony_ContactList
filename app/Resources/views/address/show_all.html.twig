@@ -1,7 +1,9 @@
-Address:<br>
 {% for address in addresses %}
+        Address <a href="{{ path('contactlist_address_delete', {'addressId': address.id, 'id': contact.id}) }}">delete</a></br>
         City: {{ address.city }}</br>
         Street: {{ address.street }}</br>
         Building No: {{ address.buildingNumber }}</br>
         Flat No: {{ address.flatNumber }}</br>
+    {% else %}
+        Address: No addresses found
 {% endfor %}

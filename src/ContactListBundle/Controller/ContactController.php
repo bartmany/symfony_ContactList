@@ -134,9 +134,11 @@ class ContactController extends Controller
         }
 
         $addresses = $this->getDoctrine()->getRepository('ContactListBundle:Address')->findAllById($id);
+        $phoneNumbers = $this->getDoctrine()->getRepository('ContactListBundle:PhoneNumber')->findAllById($id);
 
         return ['contact' => $contact,
-                'addresses' => $addresses];
+                'addresses' => $addresses,
+                'phoneNumbers' => $phoneNumbers];
     }
 
     /**
