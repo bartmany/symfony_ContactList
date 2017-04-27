@@ -1,0 +1,7 @@
+{% extends "::base.html.twig" %}
+{% block title %}{{ group.name }}{% endblock %}
+{% block body %}
+    Name: {{ group.name }}
+    <br>{{ include(':groups:show_contacts.html.twig', {'contacts': group.contacts}) }}
+    <br><a href="{{ path('contactlist_groups_showall') }}">list</a>
+{% endblock %}

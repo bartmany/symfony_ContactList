@@ -3,7 +3,7 @@
 {% block body %}
     <ol>Groups <a href="{{ path('contactlist_groups_form') }}">create</a>
         {% for group in groups %}
-            <li>{{ group.name }}
+            <li><a href="{{ path('contactlist_groups_showbyid', {'id': group.id}) }}">{{ group.name }}</a> -/ <a href="{{ path('contactlist_groups_delete', {'id': group.id}) }}">delete</a>
             </li>
             {% else %}
                 <p>No Groups found</p>
