@@ -1,9 +1,9 @@
 <div class="panel-heading">
-    <p>Contacts in Group</p>
+    <p><h5>Contacts in Group</h5></p>
 </div>
 {% for contact in contacts %}
     <div class="panel-body">
-        <p>Name: {{ contact.name }}</p>
+        <li class="list-group-item">{{ contact.name }}</li>
     </div>
 {% else %}
     <div class="panel-body">
