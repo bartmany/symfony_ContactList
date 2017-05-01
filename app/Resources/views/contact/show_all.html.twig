@@ -3,6 +3,7 @@
 {% block body %}
     <div class="panel panel-default">
         <div class="panel-heading">
+            {{ include(':forms:search.html.twig') }}
             <p><h1 style="text-align: center">Contacts <a href="{{ path('contactlist_contact_create') }}" class="btn btn-success">create</a><a href="{{ path('contactlist_groups_showall') }}" class="btn btn-info pull-right">groups view</a></h1></p>
         </div>
         <div class="panel-body">

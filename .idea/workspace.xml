@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3036ee-b2f9-4793-adb7-aa211386db0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/contact/show_results.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/forms/search.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show_contacts.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig">
+      <file leaf-file-name="search.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/search.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -27,9 +32,63 @@
       <file leaf-file-name="show_all.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="40" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+              <folding>
+                <element signature="e#12#28#0#Twig" expanded="false" />
+                <element signature="e#294#320#0#Twig" expanded="false" />
+                <element signature="e#379#405#0#Twig" expanded="false" />
+                <element signature="e#645#673#0#Twig" expanded="false" />
+                <element signature="e#757#783#0#Twig" expanded="false" />
+                <element signature="e#896#928#0#Twig" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_contact.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="165" column="39" lean-forward="false" selection-start-line="165" selection-start-column="39" selection-end-line="165" selection-end-column="39" />
+              <folding>
+                <element signature="e#48#85#0#PHP" expanded="true" />
+                <element signature="e#2943#2973#0#PHP" expanded="true" />
+                <element signature="e#4231#4258#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_results.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_results.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <marker date="1493639387000" expanded="true" signature="326:401" ph="SELECT conta... ContactListBundle" />
+                <marker date="1493639387000" expanded="true" signature="583:666" ph="SELECT conta... ContactListBundle" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,27 +117,29 @@
         <option value="$PROJECT_DIR$/app/Resources/views/phonenumber/form.html.twig" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Form/GroupsType.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Form/ContactToGroupType.php" />
-        <option value="$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/groups_contact.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Repository/GroupsRepository.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/AddressController.php" />
-        <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/EmailController.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/PhoneNumberController.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/GroupsController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/address/show_all.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/forms/form.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/phonenumber/show_all.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/email/show_all.html.twig" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Form/ContactType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_all.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_group.html.twig" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/forms/search.html.twig" />
+        <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php" />
+        <option value="$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/contact/show_results.html.twig" />
       </list>
     </option>
   </component>
@@ -352,6 +413,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfony_ContactList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfony_ContactList" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="email" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -491,12 +578,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493159797590</updated>
       <workItem from="1493159799020" duration="9858000" />
-      <workItem from="1493282382706" duration="32193000" />
+      <workItem from="1493282382706" duration="34776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42051000" />
+    <option name="totallyTimeSpent" value="44634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1439" height="833" extended-state="0" />
@@ -532,22 +619,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/address/show_all.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Entity/Address.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -767,16 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <marker date="1493159568000" expanded="true" signature="326:401" ph="SELECT conta... ContactListBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Entity/groups_contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -904,39 +965,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="132" column="5" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-          <folding>
-            <element signature="e#48#85#0#PHP" expanded="true" />
-            <element signature="e#2842#2872#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Controller/GroupsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="116" column="92" lean-forward="false" selection-start-line="116" selection-start-column="92" selection-end-line="116" selection-end-column="92" />
           <folding>
-            <element signature="e#48#84#0#PHP" expanded="true" />
-            <element signature="e#1461#1489#1#PHP" expanded="true" />
-            <element signature="e#1737#1763#1#PHP" expanded="true" />
-            <element signature="e#2010#2036#1#PHP" expanded="true" />
-            <element signature="e#2338#2364#1#PHP" expanded="true" />
-            <element signature="e#2623#2651#1#PHP" expanded="true" />
-            <element signature="e#2805#2831#1#PHP" expanded="true" />
-            <element signature="e#2901#2928#1#PHP" expanded="true" />
-            <element signature="e#3226#3255#0#PHP" expanded="true" />
+            <element signature="e#48#84#0#PHP" expanded="false" />
+            <element signature="e#1461#1489#1#PHP" expanded="false" />
+            <element signature="e#1737#1763#1#PHP" expanded="false" />
+            <element signature="e#2010#2036#1#PHP" expanded="false" />
+            <element signature="e#2338#2364#1#PHP" expanded="false" />
+            <element signature="e#2623#2651#1#PHP" expanded="false" />
+            <element signature="e#2805#2831#1#PHP" expanded="false" />
+            <element signature="e#2901#2928#1#PHP" expanded="false" />
+            <element signature="e#3226#3255#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -949,32 +991,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="101" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="101" />
+        <state relative-caret-position="165">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="165" column="39" lean-forward="false" selection-start-line="165" selection-start-column="39" selection-end-line="165" selection-end-column="39" />
           <folding>
-            <element signature="e#270#302#0#Twig" expanded="true" />
-            <element signature="e#669#697#0#Twig" expanded="true" />
-            <element signature="e#1024#1046#0#Twig" expanded="true" />
-            <element signature="e#1380#1404#0#Twig" expanded="true" />
-            <element signature="e#1598#1625#0#Twig" expanded="true" />
+            <element signature="e#48#85#0#PHP" expanded="true" />
+            <element signature="e#2943#2973#0#PHP" expanded="true" />
+            <element signature="e#4231#4258#1#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/search.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="false" />
+            <element signature="e#294#320#0#Twig" expanded="false" />
+            <element signature="e#379#405#0#Twig" expanded="false" />
+            <element signature="e#645#673#0#Twig" expanded="false" />
+            <element signature="e#757#783#0#Twig" expanded="false" />
+            <element signature="e#896#928#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1493639387000" expanded="true" signature="326:401" ph="SELECT conta... ContactListBundle" />
+            <marker date="1493639387000" expanded="true" signature="583:666" ph="SELECT conta... ContactListBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_results.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
         </state>
       </provider>

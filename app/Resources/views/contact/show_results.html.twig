@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+{% block title %}Search Results{% endblock %}
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p><h1 style="text-align: center">Search Results</h1></p>
+        </div>
+        <div class="panel-body">
+            <ol class="list-group">
+                {% for contact in contacts %}
+                    <li class="list-group-item"><a href="{{ path('contactlist_contact_showbyid', {'id': contact.id}) }}">{{ contact.name }}</a>
+                        <a href="{{ path('contactlist_contact_delete', {'id': contact.id}) }}" class="btn btn-danger btn-xs pull-right">delete</a>
+                        <a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}" class="btn btn-primary btn-xs pull-right">edit</a>
+                    </li>
+                {% else %}
+                    <p>No Contacts Found</p>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="panel-footer">
+            <a href="{{ path('contactlist_contact_showall') }}" class="btn btn-info btn-lg btn-block">back to list</a>
+        </div>
+    </div>
+{% endblock %}

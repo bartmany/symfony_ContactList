@@ -20,4 +20,15 @@ class ContactRepository extends EntityRepository
 
         return $contacts;
     }
+
+    public function findStartsWidth($data)
+    {
+        $dql = "SELECT contact FROM ContactListBundle:Contact contact WHERE contact.name LIKE :name";
+
+        $name = $data.'%';
+
+        $contacts = $this->getEntityManager()->createQuery($dql)->setParameter('name', $name)->getResult();
+
+        return $contacts;
+    }
 }

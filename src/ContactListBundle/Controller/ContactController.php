@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ContactController extends Controller
 {
@@ -68,7 +69,7 @@ class ContactController extends Controller
     }
 
     /**
-     * @Route("/{id}/modify")
+     * @Route("/{id}/modify", requirements={"id"="\d+"})
      * @Template(":forms:form.html.twig")
      * @Method("GET")
      */
@@ -87,7 +88,7 @@ class ContactController extends Controller
     }
 
     /**
-     * @Route("/{id}/modify")
+     * @Route("/{id}/modify", requirements={"id"="\d+"})
      * @Template(":forms:form.html.twig")
      * @Method("POST")
      */
@@ -117,7 +118,7 @@ class ContactController extends Controller
     }
 
     /**
-     * @Route("/{id}")
+     * @Route("/{id}", requirements={"id"="\d+"})
      * @Template(":contact:show_contact.html.twig")
      */
     public function showByIdAction($id)
@@ -133,7 +134,7 @@ class ContactController extends Controller
     }
 
     /**
-     * @Route("/delete/{id}")
+     * @Route("/delete/{id}", requirements={"id"="\d+"})
      */
     public function deleteAction($id)
     {
@@ -152,4 +153,16 @@ class ContactController extends Controller
         return $this->redirectToRoute('contactlist_contact_showall');
     }
 
+    /**
+     * @Route("/search")
+     * @Template(":contact:show_results.html.twig")
+     */
+    public function searchAction(Request $request)
+    {
+        $data = $request->request->get('search');
+
+        $result = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findStartsWidth($data);
+
+        return ['contacts' => $result];
+    }
 }
