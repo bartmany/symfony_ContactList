@@ -30,7 +30,7 @@ class Groups
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Contact", inversedBy="groups")
+     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Contact", mappedBy="groups")
      */
     private $contacts;
 

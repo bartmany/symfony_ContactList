@@ -52,7 +52,7 @@ class Contact
     private $emails;
 
     /**
-     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Groups", mappedBy="contacts")
+     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Groups", inversedBy="contacts")
      * @ORM\JoinTable(name="groups_contact")
      */
     private $groups;
