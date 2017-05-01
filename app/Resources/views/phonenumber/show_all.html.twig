@@ -1,7 +1,16 @@
 {% for phoneNumber in phoneNumbers %}
-    Phone <a href="{{ path('contactlist_phonenumber_delete', {'id': contact.id, 'phoneNumberId': phoneNumber.id}) }}">delete</a><br>
-    Phone Name: {{ phoneNumber.name }}<br>
-    Phone Number: {{ phoneNumber.number }}<br>
+    <div class="panel-heading">
+        <p>Phone <a href="{{ path('contactlist_phonenumber_delete', {'id': contact.id, 'phoneNumberId': phoneNumber.id}) }}" class="btn btn-danger btn-xs">delete</a></p>
+    </div>
+    <div class="panel-body">
+        <p>Phone Name: {{ phoneNumber.name }}</p>
+        <p>Phone Number: {{ phoneNumber.number }}</p>
+    </div>
 {% else %}
-    Phone Number: No phone numbers found
+    <div class="panel-heading">
+        <p>Phone Number</p>
+    </div>
+    <div class="panel-body">
+        <p>No phone numbers found</p>
+    </div>
 {% endfor %}

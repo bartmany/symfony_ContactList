@@ -1,14 +1,32 @@
 {% extends "::base.html.twig" %}
 {% block title %}{{ contact.name }}{% endblock %}
 {% block body %}
-    Name: {{ contact.name }}
-    <br>Description: {{ contact.description }}<br>
-    <br>{{ include(':phonenumber:show_all.html.twig', {'phoneNumbers': contact.phonenumbers}) }}
-    <br>{{ include(':email:show_all.html.twig', {'emails': contact.emails}) }}
-    <br>{{ include(':address:show_all.html.twig', {'addresses': contact.addresses}) }}
-    <br><a href="{{ path('contactlist_phonenumber_form', {'id': contact.id}) }}">add phone number</a>
-    <br><a href="{{ path('contactlist_email_form', {'id': contact.id}) }}">add email</a>
-    <br><a href="{{ path('contactlist_address_form', {'id': contact.id}) }}">add new address</a>
-    <br><a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}">edit</a>
-    <a href="{{ path('contactlist_contact_showall') }}">list</a>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p><h1>{{ contact.name }}<small> {{ contact.description }}</small><a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}" class="btn btn-primary btn-lg pull-right">edit</a></h1></p>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                {{ include(':phonenumber:show_all.html.twig', {'phoneNumbers': contact.phonenumbers}) }}
+                <div class="panel-footer">
+                    <a href="{{ path('contactlist_phonenumber_form', {'id': contact.id}) }}" class="btn btn-success btn-xs">+ number</a>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                {{ include(':email:show_all.html.twig', {'emails': contact.emails}) }}
+                <div class="panel-footer">
+                    <a href="{{ path('contactlist_email_form', {'id': contact.id}) }}" class="btn btn-success btn-xs">+ email</a>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                {{ include(':address:show_all.html.twig', {'addresses': contact.addresses}) }}
+                <div class="panel-footer">
+                    <a href="{{ path('contactlist_address_form', {'id': contact.id}) }}" class="btn btn-success btn-xs">+ address</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <a href="{{ path('contactlist_contact_showall') }}" class="btn btn-info btn-lg btn-block">back to list</a>
+        </div>
+    </div>
 {% endblock %}

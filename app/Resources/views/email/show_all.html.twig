@@ -1,7 +1,16 @@
 {% for email in emails %}
-    Email<a href="{{ path('contactlist_email_delete', {'emailId': email.id, 'id': contact.id}) }}">delete</a></br>
-    Email Type: {{ email.name }}</br>
-    Email: {{ email.email }}</br>
+    <div class="panel-heading">
+        <p>Email <a href="{{ path('contactlist_email_delete', {'emailId': email.id, 'id': contact.id}) }}" class="btn btn-danger btn-xs">- delete</a></p>
+    </div>
+    <div class="panel-body">
+        <p>Email Type: {{ email.name }}</p>
+        <p>Email: {{ email.email }}</p>
+    </div>
 {% else %}
-    Email: No emails found
+    <div class="panel-heading">
+        <p>Email</p>
+    </div>
+    <div class="panel-body">
+        <p>No emails found</p>
+    </div>
 {% endfor %}

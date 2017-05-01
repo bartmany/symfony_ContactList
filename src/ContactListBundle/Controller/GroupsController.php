@@ -106,17 +106,29 @@ class GroupsController extends Controller
 
         return $this->redirectToRoute('contactlist_groups_showall');
     }
-//
-//    /**
-//     * @Route("/add")
-//     */
-//    public function assignUserAction()
-//    {
-//        $group = $this->getDoctrine()->getRepository('ContactListBundle:Groups')->find(2);
-//
-//
-//        return new Response($group->getName());
-//
-//    }
+
+    /**
+     * @Route("/add/{id}")
+     */
+    public function assignUserAction($id)
+    {
+        $group = $this->getDoctrine()->getRepository('ContactListBundle:Groups')->find($id);
+
+        $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find('2');
+
+        if (!$group){
+            throw $this->createNotFoundException('Group not found');
+        }
+
+        $group->addContact($contact);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->persist($group);
+        $em->flush();
+
+        return $this->redirectToRoute('contactlist_groups_showbyid', ['id', $id]);
+
+    }
 }
 

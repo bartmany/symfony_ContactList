@@ -53,7 +53,6 @@ class Contact
 
     /**
      * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Groups", mappedBy="contacts")
-     * @ORM\JoinTable(name="groups_contact")
      */
     private $groups;
 

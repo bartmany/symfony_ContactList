@@ -1,11 +1,12 @@
 {% extends "::base.html.twig" %}
 {% block title %}Contact List{% endblock %}
 {% block body %}
-    <ol>Contacts <a href="{{ path('contactlist_contact_create') }}">create</a>
+    <p><h1 style="text-align: center">Contacts <a href="{{ path('contactlist_contact_create') }}" class="btn btn-success">create</a></h1></p>
+    <ol class="list-group">
     {% for contact in contacts %}
-        <li><a href="{{ path('contactlist_contact_showbyid', {'id': contact.id}) }}">{{ contact.name }}</a>
-            /- <a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}">edit</a>
-            /- <a href="{{ path('contactlist_contact_delete', {'id': contact.id}) }}">delete</a>
+        <li class="list-group-item"><a href="{{ path('contactlist_contact_showbyid', {'id': contact.id}) }}">{{ contact.name }}</a>
+            <a href="{{ path('contactlist_contact_delete', {'id': contact.id}) }}" class="btn btn-danger btn-xs pull-right">delete</a>
+            <a href="{{ path('contactlist_contact_showeditform', {'id': contact.id}) }}" class="btn btn-primary btn-xs pull-right">edit</a>
         </li>
         {% else %}
             <p>No Contacts Found</p>
