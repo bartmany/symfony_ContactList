@@ -31,7 +31,6 @@ class Groups
 
     /**
      * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Contact", inversedBy="groups")
-     * @ORM\JoinTable(name="groups_contact")
      */
     private $contacts;
 

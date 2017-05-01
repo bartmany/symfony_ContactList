@@ -1,7 +1,17 @@
 {% extends "::base.html.twig" %}
 {% block title %}{{ group.name }}{% endblock %}
 {% block body %}
-    Name: {{ group.name }}
-    <br>{{ include(':groups:show_contacts.html.twig', {'contacts': group.contacts}) }}
-    <br><a href="{{ path('contactlist_groups_showall') }}">list</a>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+        <p><h1>Name: {{ group.name }}</h1></p>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+            <br>{{ include(':groups:show_contacts.html.twig', {'contacts': group.contacts}) }}
+            </div>
+            <div class="panel-footer">
+            <br><a href="{{ path('contactlist_groups_showall') }}" class="btn btn-info btn-lg btn-block">back to list</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

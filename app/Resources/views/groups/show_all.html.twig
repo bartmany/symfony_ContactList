@@ -1,12 +1,18 @@
 {% extends "::base.html.twig" %}
 {% block title %}Group List{% endblock %}
 {% block body %}
-    <ol>Groups <a href="{{ path('contactlist_groups_form') }}">create</a>
-        {% for group in groups %}
-            <li><a href="{{ path('contactlist_groups_showbyid', {'id': group.id}) }}">{{ group.name }}</a> -/ <a href="{{ path('contactlist_groups_delete', {'id': group.id}) }}">delete</a>
-            </li>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p><h1 style="text-align: center">Groups <a href="{{ path('contactlist_groups_form') }}" class="btn btn-success">create</a><a href="{{ path('contactlist_contact_showall') }}" class="btn btn-info pull-right">contacts view</a> </h1></p>
+        </div>
+        <div class="panel-body">
+            <ol class="list-group">
+            {% for group in groups %}
+                <li class="list-group-item"><a href="{{ path('contactlist_groups_showbyid', {'id': group.id}) }}">{{ group.name }}</a><a href="{{ path('contactlist_groups_delete', {'id': group.id}) }}" class="btn btn-danger btn-xs pull-right">delete</a></li>
             {% else %}
                 <p>No Groups found</p>
-        {% endfor %}
-    </ol>
+            {% endfor %}
+            </ol>
+        </div>
+    </div>
 {% endblock %}

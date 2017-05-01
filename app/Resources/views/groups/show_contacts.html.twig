@@ -1,7 +1,12 @@
-<ol> Contacts
+<div class="panel-heading">
+    <p>Contacts in Group</p>
+</div>
 {% for contact in contacts %}
-    <li>Name: contact.name</li>
+    <div class="panel-body">
+        <p>Name: contact.name</p>
+    </div>
 {% else %}
-    <br>No contacts found in Group
+    <div class="panel-body">
+        <p>No contacts found</p>
+    </div>
 {% endfor %}
-</ol>

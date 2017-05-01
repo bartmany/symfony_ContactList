@@ -3,7 +3,7 @@
         <p>Email <a href="{{ path('contactlist_email_delete', {'emailId': email.id, 'id': contact.id}) }}" class="btn btn-danger btn-xs">- delete</a></p>
     </div>
     <div class="panel-body">
-        <p>Email Type: {{ email.name }}</p>
+        <p>Type: {{ email.name }}</p>
         <p>Email: {{ email.email }}</p>
     </div>
 {% else %}
