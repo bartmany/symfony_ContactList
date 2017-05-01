@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3036ee-b2f9-4793-adb7-aa211386db0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/address/show_all.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/address/show_all.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/email/show_all.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/email/show_all.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/phonenumber/show_all.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/phonenumber/show_all.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Controller/GroupsController.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Controller/GroupsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/forms/form.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/forms/form.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,12 +14,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show_all.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_all.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="120" lean-forward="false" selection-start-line="3" selection-start-column="120" selection-end-line="3" selection-end-column="120" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+              <folding>
+                <element signature="e#110#138#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +94,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/contact/form.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/email/form.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/phonenumber/form.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/forms/form.html.twig" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Form/GroupsType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_all.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_contacts.html.twig" />
@@ -113,6 +116,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/phonenumber/show_all.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/contact/show_contact.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/contact/show_all.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/forms/form.html.twig" />
       </list>
     </option>
   </component>
@@ -360,6 +364,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfony_ContactList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfony_ContactList" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="email" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -499,12 +529,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493159797590</updated>
       <workItem from="1493159799020" duration="9858000" />
-      <workItem from="1493282382706" duration="29459000" />
+      <workItem from="1493282382706" duration="29659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39317000" />
+    <option name="totallyTimeSpent" value="39517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1439" height="833" extended-state="0" />
@@ -906,14 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -983,6 +1005,16 @@
         <state relative-caret-position="45">
           <caret line="3" column="120" lean-forward="false" selection-start-line="3" selection-start-column="120" selection-end-line="3" selection-end-column="120" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/forms/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+          <folding>
+            <element signature="e#110#138#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
