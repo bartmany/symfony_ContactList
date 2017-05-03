@@ -25,7 +25,7 @@ class ContactRepository extends EntityRepository
     {
         $dql = "SELECT contact FROM ContactListBundle:Contact contact WHERE contact.name LIKE :name";
 
-        $name = $data.'%';
+        $name = '%'.$data.'%';
 
         $contacts = $this->getEntityManager()->createQuery($dql)->setParameter('name', $name)->getResult();
 
