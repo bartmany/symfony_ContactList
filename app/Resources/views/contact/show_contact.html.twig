@@ -7,6 +7,9 @@
         </div>
         <div class="panel-body">
             <div class="panel panel-default">
+                {{ include(':groups:list_groups.html.twig', {'groups': contact.groups}) }}
+            </div>
+            <div class="panel panel-default">
                 {{ include(':phonenumber:show_all.html.twig', {'phoneNumbers': contact.phonenumbers}) }}
                 <div class="panel-footer">
                     <a href="{{ path('contactlist_phonenumber_form', {'id': contact.id}) }}" class="btn btn-success btn-xs">+ number</a>
