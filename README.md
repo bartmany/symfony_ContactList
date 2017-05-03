@@ -1,4 +1,7 @@
-contact_list
-============
+Contact_list
+=========================================================
 
-A Symfony project created on April 25, 2017, 1:38 pm.
+Simple contact list program with groups functionality created in Symfony 2.8
+
+#Few screens:
+

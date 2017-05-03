@@ -36,7 +36,7 @@ class PhoneNumber
     private $number;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="phonenumbers")
+     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="phonenumbers", cascade={"remove"})
      */
     private $contact;
 

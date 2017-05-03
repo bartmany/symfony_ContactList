@@ -37,17 +37,17 @@ class Contact
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\Address", mappedBy="contact")
+     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\Address", mappedBy="contact", cascade={"remove"})
      */
     private $addresses;
 
     /**
-     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\PhoneNumber", mappedBy="contact")
+     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\PhoneNumber", mappedBy="contact", cascade={"remove"})
      */
     private $phonenumbers;
 
     /**
-     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\Email", mappedBy="contact")
+     * @ORM\OneToMany(targetEntity="ContactListBundle\Entity\Email", mappedBy="contact", cascade={"remove"})
      */
     private $emails;
 

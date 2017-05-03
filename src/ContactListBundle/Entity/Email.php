@@ -36,7 +36,7 @@ class Email
     private $email;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="emails")
+     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="emails", cascade={"remove"})
      */
     private $contact;
 

@@ -30,7 +30,7 @@ class Groups
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Contact", mappedBy="groups")
+     * @ORM\ManyToMany(targetEntity="ContactListBundle\Entity\Contact", mappedBy="groups", cascade={"remove"})
      */
     private $contacts;
 

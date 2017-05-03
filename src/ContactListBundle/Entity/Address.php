@@ -50,7 +50,7 @@ class Address
     private $flatNumber;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="addresses")
+     * @ORM\ManyToOne(targetEntity="ContactListBundle\Entity\Contact", inversedBy="addresses", cascade={"remove"})
      */
     private $contact;
 
