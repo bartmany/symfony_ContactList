@@ -18,4 +18,8 @@ Simple contact list program with groups functionality created in Symfony 2.8
     
     5.On detailed contact info page there are buttons to add new phone/email/address
      information.
-
+     
+    6.On homepage added search contact bar and groups view switch.
+    
+    7.On groups view there is groups list, after click showing contacts added to 
+     group.
