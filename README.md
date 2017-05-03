@@ -1,7 +1,7 @@
 Contact_list
 =========================================================
 
-Simple contact list program with groups functionality created in Symfony 2.8
+Simple contact list application with groups functionality created in Symfony 2.8
 
 Added bootstrap to enhance view of application.
 
