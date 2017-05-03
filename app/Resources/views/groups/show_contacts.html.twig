@@ -3,7 +3,7 @@
 </div>
 {% for contact in contacts %}
     <div class="panel-body">
-        <li class="list-group-item">{{ contact.name }}</li>
+        <li class="list-group-item"><a href="{{ path('contactlist_contact_showbyid', {'id': contact.id}) }}">{{ contact.name }}</a></li>
     </div>
 {% else %}
     <div class="panel-body">
