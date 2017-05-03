@@ -31,4 +31,16 @@ class ContactRepository extends EntityRepository
 
         return $contacts;
     }
+
+    public function findContactInfo($id)
+    {
+        $dql = "SELECT c,a,e,p,g FROM ContactListBundle:Contact c 
+                LEFT JOIN c.addresses a
+                LEFT JOIN c.emails e
+                LEFT JOIN c.phonenumbers p
+                LEFT JOIN c.groups g
+                WHERE c.id=:id";
+        return $this->getEntityManager()->createQuery($dql)
+            ->setParameter('id', $id)->getOneOrNullResult();
+    }
 }

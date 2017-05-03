@@ -123,7 +123,7 @@ class ContactController extends Controller
      */
     public function showByIdAction($id)
     {
-        $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->find($id);
+        $contact = $this->getDoctrine()->getRepository('ContactListBundle:Contact')->findContactInfo($id);
 
         if (!$contact){
             throw $this->createNotFoundException('Contact not found');
