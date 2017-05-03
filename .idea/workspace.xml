@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3036ee-b2f9-4793-adb7-aa211386db0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Address.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Email.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Entity/PhoneNumber.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Entity/PhoneNumber.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactListBundle/Form/ContactType.php" afterPath="$PROJECT_DIR$/src/ContactListBundle/Form/ContactType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,12 +14,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -85,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ContactListBundle/Form/ContactType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -169,13 +161,13 @@
         <option value="$PROJECT_DIR$/app/Resources/views/groups/show_group.html.twig" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Repository/ContactRepository.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Controller/ContactController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Groups.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/PhoneNumber.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Email.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Address.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/ContactListBundle/Form/ContactType.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -421,12 +413,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493159797590</updated>
       <workItem from="1493159799020" duration="9858000" />
-      <workItem from="1493282382706" duration="38703000" />
+      <workItem from="1493282382706" duration="39484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48561000" />
+    <option name="totallyTimeSpent" value="49342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1439" height="833" extended-state="0" />
@@ -830,17 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -910,6 +891,17 @@
         <state relative-caret-position="420">
           <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
